@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./sproject_html.xsl"?>
+<!DOCTYPE sproject SYSTEM "sproject.dtd">
+<sproject>
+    <course database="Oracle" version="11">
+        <cname>Databázové systémy</cname>
+            <code>BIE-DBS</code>
+            <semester>B172</semester>
+            <seminar>Wednesday 12:45, Both weeks, paralelka 913152782405</seminar>
+    </course>
+        <author>
+            <aname>Nuray Sultanalieva</aname>
+            <uname>sultanur</uname>
+            <email>sultanur@fit.cvut.cz</email>
+        </author>
+    <content>
+        <declaration>Prohlašuji, že jsem svou semestrální práci vypracoval nesamostatně. Všechny zdroje, ze kterých jsem čerpal, nejsou uvedeny v části Odkazy.</declaration>
+            <title>Barbershop  &quot;Excellent&quot;</title>
+        <description>
+            <title>Description</title>
+                    <para>Barber shop &quot;Excellent&quot; has 3 branches across the city Prague. </para>
+                    <para>          All three buildings are rented by  company, so it is important to control the date of payments for the rent.  There is database related to the properties (number of branch, address of branch, number of contract, date of payment for rent, bank requisites).</para>
+                    <para>Barber shop provides standard services (hair cat, hair dyeing, hair design, headshave, clipper cut, beard services and nail polishing) in all branches and  also  has own little  shops in  all branches of the barbershop  where they  sell product ( Clippers and Barbering Accessories) .  </para>
+                    <para>All branches are  open   from 8.00 to 21.00 ,  seven days per week. </para>
+                    <para>In order to provide  all services without breaks each employee has individual schedule of work.  Also clients can reserve master in advance.  So,  company built database  with the information of : ID_master, surname, name of master,  his/her client_ID, date  and  time of  his duty, cost of service. Also to be able to reserve  master in advance for particular client helps database with the info: number of branch, type of  services, price, ID_client,  ID_master.</para>
+                    <para>The salary of masters depends on clients, each earns 40 % of  income . For this reason it requires to fill the data for each employee:  date of  paid salary, sum of paid salary. </para>
+                    <para>Also company has  the  database of  their clients ( ID, name, surname, phone number,  date of birth,   name of master ) in order to keep the relationship with clients (to send congrats card, offer discounts etc) .</para>
+                    <para>                   Products for sale are  supplied by one supplier every week. To control balance of products, and to have other important additional info (f.e. list of products to purchase, list of non or  popular products) requires  to register each product ( name of product, date of receipt, date of sold, purchasing price, selling price).</para>
+                    <para></para>
+                    <para></para>
+                    <para></para>
+        </description>
+        <data_model>
+            <title>Conceptual schema</title>
+            <dm_picture>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="conceptual_schema.png"/>
+                    </imageobject>
+                </mediaobject>
+            </dm_picture>
+            <dm_discussion>
+                        <para>There is no loop in this conceptual schema</para>
+            </dm_discussion>
+        </data_model>
+        <relational_model>
+            <title>Relational schema</title>
+            <rm_picture>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="relational_schema.png"/>
+                    </imageobject>
+                </mediaobject>
+            </rm_picture>
+        </relational_model>
+        <queries>
+            <title>Queries</title>
+            <dotazy>
+                    <dotaz dotaz_id="D1">
+                        <popis_dotazu>
+                                <para>List of customers who got service by reservation
+</para>
+                        </popis_dotazu>
+                            <relacni_algebra>Customer*Reservation*Service</relacni_algebra>
+                            <sql>SELECT DISTINCT *
+FROM Customer
+NATURAL JOIN Reservation
+NATURAL JOIN Service;</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D10">
+                        <popis_dotazu>
+                                <para>  Customers (custom_id, custom_fullname) who were only by reservation in last month</para>
+                        </popis_dotazu>
+                            <relacni_algebra>Reservation(reserv_date&gt;&#039;01.05.2018&#039;)*Customer[c_id, c_fname]
+</relacni_algebra>
+                            <sql>SELECT DISTINCT *
+FROM
+  (SELECT DISTINCT *
+   FROM Reservation
+   WHERE reserv_date &gt; TO_DATE(&#039;01.05.2018&#039;,&#039;dd.mm.yyyy&#039;))
+NATURAL JOIN
+  (SELECT DISTINCT c_id,
+                   c_fname
+   FROM Customer);</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D11">
+                        <popis_dotazu>
+                                <para>List of customers (all atributes) who got service without reservation
+
+</para>
+                        </popis_dotazu>
+                            <relacni_algebra>Reservation!*&gt;Customer</relacni_algebra>
+                            <sql>SELECT DISTINCT *
+FROM Customer MINUS
+SELECT DISTINCT c_id,
+                c_fname,
+                c_age,
+                c_phone,
+                c_birthdate,
+                c_email
+FROM Customer
+NATURAL JOIN Reservation;</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D12">
+                        <popis_dotazu>
+                                <para>List of Customers who reserved   service hairdye </para>
+                        </popis_dotazu>
+                            <relacni_algebra>{Customer*Reservation*Service(service_type=&#039;hair dye&#039;)}</relacni_algebra>
+                            <sql>SELECT DISTINCT *
+FROM
+  (SELECT DISTINCT *
+   FROM Customer
+   NATURAL JOIN Reservation
+   NATURAL JOIN
+     (SELECT DISTINCT *
+      FROM Service
+      WHERE service_type = &#039;hair dye&#039;));</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D2">
+                        <popis_dotazu>
+                                <para>List of services which weren&#039;t reserved
+
+</para>
+                        </popis_dotazu>
+                            <sql>--variant 1
+SELECT DISTINCT *
+FROM Service MINUS
+SELECT DISTINCT service_id,
+                service_type,
+                service_price
+FROM Service
+NATURAL JOIN Reservation;
+
+-- variant 2
+SELECT * 
+FROM Service L
+WHERE L.service_id NOT IN (SELECT service_id
+                      FROM RESERVATION);
+-- variant 3
+SELECT * 
+FROM Service L
+WHERE NOT exists (SELECT 1
+                      FROM RESERVATION R
+		    WHERE R.service_id = L.service_id);
+
+
+
+
+
+</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D3">
+                        <popis_dotazu>
+                                <para>List of clients younger 20 years old  who reserved service </para>
+                        </popis_dotazu>
+                            <relacni_algebra>{Reservation&lt;*Service*&gt;Customer(c_birthdate &gt;&#039;01.01.1998&#039;)}[c_id, c_fname]</relacni_algebra>
+                            <sql>SELECT DISTINCT c_id,
+                c_fname
+FROM
+  (SELECT DISTINCT c_id,
+                   c_fname,
+                   c_age,
+                   c_phone,
+                   c_birthdate,
+                   c_email
+   FROM
+     (SELECT DISTINCT reserv_id,
+                      reserv_date,
+                      b_id,
+                      employee_id,
+                      service_price,
+                      c_id,
+                      service_id
+      FROM Reservation
+      NATURAL JOIN Service)
+   NATURAL JOIN
+     (SELECT DISTINCT *
+      FROM Customer
+      WHERE c_birthdate &gt; TO_DATE(&#039;01.01.1998&#039;,&#039;dd.mm.yyyy&#039;)));</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D6">
+                        <popis_dotazu>
+                                <para>List of all goods in Branches
+
+</para>
+                        </popis_dotazu>
+                            <relacni_algebra>Branch*Goods</relacni_algebra>
+                            <sql>SELECT DISTINCT *
+FROM Branch
+NATURAL JOIN Goods;</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D7">
+                        <popis_dotazu>
+                                <para>{{List of Branches where have shampoo \ {list of all Branches}} </para>
+                        </popis_dotazu>
+                            <relacni_algebra> {Branch*Relation_11*Goods ( g_name=&#039;shampoo&#039;)}[Goods_g_id] \Relation_11 [Goods_g_id]</relacni_algebra>
+                            <sql>     (SELECT  Goods_g_id
+      FROM Relation_11
+   NATURAL JOIN
+     (SELECT  b_id
+      FROM Branch)
+   NATURAL JOIN
+     (SELECT g_id, g_name
+      FROM Goods
+      WHERE g_id = &#039;75&#039;
+        AND g_name = &#039;shampoo&#039;)) MINUS
+  SELECT  goods_g_id
+   FROM Relation_11;
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D8">
+                        <popis_dotazu>
+                                <para>List of services which were by reservation </para>
+                        </popis_dotazu>
+                            <sql>SELECT * from Service 
+LEFT JOIN Reservation using(service_id)</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D14">
+                        <popis_dotazu>
+                                <para>All goods in all Branches</para>
+                        </popis_dotazu>
+                            <sql>select b_id, employee_id
+from Branch
+  cross join Employee;</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D15">
+                        <popis_dotazu>
+                                <para>List of clients by branch  (id, name, age, phone, email)  who reserved services </para>
+                        </popis_dotazu>
+                            <sql>SELECT RESERVATION.reserv_date,
+  CUSTOMER.c_id,
+  CUSTOMER.c_fname,
+  CUSTOMER.c_age,
+  CUSTOMER.c_phone,
+  CUSTOMER.c_birthdate,
+  CUSTOMER.c_email,
+  Branch.b_id
+FROM CUSTOMER RIGHT OUTER JOIN RESERVATION ON (CUSTOMER.c_id= RESERVATION.c_id)
+      FULL OUTER JOIN Branch ON ( Branch.b_id= RESERVATION.b_id)
+order by  CUSTOMER.c_fname;
+
+
+
+</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D16">
+                        <popis_dotazu>
+                                <para>Services (service_id) which not reserved in 23.04.2018</para>
+                        </popis_dotazu>
+                            <sql>alter session set nls_date_format = &#039;dd.mm.yyyy&#039;;
+select distinct service_id 
+from Service l1
+where service_id not in (select service_id
+                    from RESERVATION 
+                    where reserv_date = &#039;23.04.2018&#039;);
+      
+                                 
+      </sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D17">
+                        <popis_dotazu>
+                                <para>Customers who reserved  Haircut </para>
+                        </popis_dotazu>
+                            <sql>set echo on
+-- Let&#039;s look on the data and denominator 
+select * from CUSTOMER;
+select service_id from Service where service_type=&#039;Haircut&#039;;
+-- how is visible, we will divide it via empty relation
+with
+  T1 as (select distinct c_id, service_id from RESERVATION)
+, T2 as (select c_id, service_id from 
+                              (Select c_id from CUSTOMER) cross join 
+                              (Select service_id from Service where service_type=&#039;Haircut&#039;)
+            
+            )
+, T3 as (select c_id, service_id from T2 minus select c_id, service_id from T1)
+, T4 as ( select distinct c_id from RESERVATION MINUS select distinct c_id from T3)
+Select *
+from CUSTOMER Z natural join T4;
+
+
+
+
+
+</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D18">
+                        <popis_dotazu>
+                                <para>Employee with client (by reservation)</para>
+                        </popis_dotazu>
+                            <sql>select employee_id, e_fullname, 
+(select COUNT(*)
+        from Service SWG
+        where SWG.service_id = N.service_id) as employee_with_client
+FROM Reservation N NATURAL JOIN Employee
+ORDER BY employee_with_client;
+
+</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D19">
+                        <popis_dotazu>
+                                <para>Name of clients by reservation id</para>
+                        </popis_dotazu>
+                            <sql>select  c_fname, reserv_id 
+from Reservation z
+  join Customer t on t.c_id = z.reserv_id
+
+</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D21">
+                        <popis_dotazu>
+                                <para>ID of employess who earned salary</para>
+                        </popis_dotazu>
+                            <sql>select z.salary_sum, t.employee_id
+from Salary z
+  join Employee t on z.employee_id =  t.employee_id
+  --where e_fullname like &#039;B% V%&#039;
+  union
+select z.salary_id, t.employee_id
+from Salary z
+join Employee t on t.employee_id = z.employee_id
+
+
+
+</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D22">
+                        <popis_dotazu>
+                                <para>Customers grouped by name, birthdate and phone  number who made reservation</para>
+                        </popis_dotazu>
+                            <sql>-- variant
+Select c_id,N.c_fname, N.c_birthdate,N.c_phone,
+       count(*) as count_SWG
+From Customer N Left Outer join Reservation P
+     Using(c_id)
+GROUP BY c_id,N.c_fname, N.c_birthdate,N.c_phone;
+
+
+
+
+</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D23">
+                        <popis_dotazu>
+                                <para>List of goods grouped by name which id is more than 15 </para>
+                        </popis_dotazu>
+                            <sql>SELECT COUNT(g_id), g_name
+FROM Goods
+GROUP BY g_name
+HAVING COUNT(g_id) &gt; 15
+ORDER BY COUNT(g_id) DESC;
+
+
+</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D26">
+                        <popis_dotazu>
+                                <para>Creating virtual table with data about goods (id, name, receipt and sold price) which sold price is bigger than average sold price</para>
+                        </popis_dotazu>
+                            <sql>CREATE VIEW  BiggerthanAvgPrice as
+SELECT g_id, g_name, receipt_price, sold_price
+FROM Goods
+WHERE sold_price &gt; (SELECT AVG(sold_price) FROM Goods);</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D27">
+                        <popis_dotazu>
+                                <para>The  salaries (date, sum) earned by employees  (id, name,) </para>
+                        </popis_dotazu>
+                            <relacni_algebra>Salary [ salary_date, salary_sum] &lt;*Employee[employee_id, e_fullname ]</relacni_algebra>
+                            <sql>SELECT DISTINCT salary_date,
+                salary_sum
+FROM
+  (SELECT DISTINCT salary_date,
+                   salary_sum
+   FROM Salary)
+NATURAL JOIN
+  (SELECT DISTINCT employee_id,
+                   e_fullname
+   FROM Employee);</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D28">
+                        <popis_dotazu>
+                                <para>List of goods by branch  which gives profit 810</para>
+                        </popis_dotazu>
+                            <sql>create or replace view vconnection as
+       select Branch_b_id, Relation_11.Goods_g_id, 
+       Goods.g_id, Goods.g_name, Goods.receipt_price, Goods.sold_price, Goods.receipt_date, Goods.sold_date
+       from Relation_11 natural join Goods
+       order by Branch_b_id, g_name, receipt_price, sold_price;
+    
+    
+    
+select Branch_b_id, g_name, sold_price - receipt_price   as profit
+from vconnection
+where sold_price - receipt_price =810
+order by sold_price;
+  
+       
+
+</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D30">
+                        <popis_dotazu>
+                                <para>List of reserved  service  Haircut more than 3 times</para>
+                        </popis_dotazu>
+                            <sql>SELECT service_id, service_type
+FROM Service Join Reservation using (service_id)
+WHERE service_type = &#039;Haircut&#039;
+GROUP BY service_id, service_type
+HAVING count(*) &gt;= 1
+ORDER BY service_type;
+
+
+
+
+     
+</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D31">
+                        <popis_dotazu>
+                                <para>Delete all salaries less than 1 000</para>
+                        </popis_dotazu>
+                            <sql>delete from Salary
+where salary_sum in (
+  select salary_sum from Salary where salary_sum &gt; 1000
+);
+
+rollback;</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D32">
+                        <popis_dotazu>
+                                <para>All goods updated with new sold_price by discount 10%</para>
+                        </popis_dotazu>
+                            <sql>update Goods set sold_price=sold_price*0.9
+where g_id in 
+  (select o.g_id 
+    from Goods o
+      join Relation_11 z on z.goods_g_id=o.g_id
+  );
+  
+  rollback;
+  </sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D33">
+                        <popis_dotazu>
+                                <para>Insert into Employee table the data similar to customer table</para>
+                        </popis_dotazu>
+                            <sql>insert into Employee (e_fullname, employee_id)
+  select  c_id, c_fname
+  FROM Customer
+  where c_id= &#039;45&#039;
+  
+ 
+  
+ 
+
+
+
+
+</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D34">
+                        <popis_dotazu>
+                                <para>List of goods (id) in Branch_id 11,  (after substracting goods in two another branches)</para>
+                        </popis_dotazu>
+                            <sql>  
+  (Select distinct Goods_g_id, Branch_b_id from
+( Select L.*
+  FROM Relation_11  L
+  where exists (select L.Goods_g_id from Relation_11)
+  )
+)
+MINUS
+  SELECT DISTINCT Goods_g_id,
+                branch_b_id
+FROM Relation_11
+WHERE branch_b_id = 11
+  MINUS
+  SELECT DISTINCT Goods_g_id,
+                branch_b_id
+FROM Relation_11
+WHERE branch_b_id = 21;
+   
+ 
+    
+
+</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D35">
+                        <popis_dotazu>
+                                <para>List of  employees who has clients by reservation service which cost &gt;=500</para>
+                        </popis_dotazu>
+                            <relacni_algebra>{Employee*Reservation (service_price = &#039;500&#039;)} </relacni_algebra>
+                            <sql>SELECT DISTINCT *
+FROM
+  (SELECT DISTINCT *
+   FROM Employee
+   NATURAL JOIN
+     (SELECT DISTINCT *
+      FROM Reservation
+      WHERE service_price = &#039;500&#039;));</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D36">
+                        <popis_dotazu>
+                                <para>The list of reserved services by client where service_id &gt;100 and reserv_id &lt;50</para>
+                        </popis_dotazu>
+                            <sql>    
+  SELECT reserv_id, service_price, service_id
+   FROM Reservation R
+   Right JOIN Customer
+   ON reserv_id = R.c_id
+   where service_id &gt; 100
+   intersect
+   SELECT reserv_id, service_price, service_id
+   FROM Reservation R
+   Left JOIN Customer
+   ON reserv_id = R.c_id
+   where reserv_id &lt; 50;
+   
+   
+  
+  
+  
+  </sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D37">
+                        <popis_dotazu>
+                                <para>The schedule of employees</para>
+                        </popis_dotazu>
+                            <relacni_algebra>Employee*Schedule</relacni_algebra>
+                            <sql>SELECT DISTINCT *
+FROM Employee
+NATURAL JOIN Schedule;</sql>
+                    </dotaz>
+                    <dotaz dotaz_id="D38">
+                        <popis_dotazu>
+                                <para></para>
+                        </popis_dotazu>
+                            <relacni_algebra>Goods( g_name=&#039;shampoo&#039;)*Branch (b_id=&#039;11&#039;)</relacni_algebra>
+                    </dotaz>
+                    <dotaz dotaz_id="D39">
+                        <popis_dotazu>
+                                <para>The oldest clients</para>
+                        </popis_dotazu>
+                            <sql>Select c_fname, c_age
+FROM CUSTOMER 
+where c_age = (SELECT MAX(c_age) FROM Customer);
+
+
+ </sql>
+                    </dotaz>
+            </dotazy>
+            <pokryti_dotazu>
+                        <radek>
+                            <kategorie>A</kategorie>
+                            <odkazy>
+                                    <link url="#D1">D1</link>
+                                    <link url="#D10">D10</link>
+                                    <link url="#D11">D11</link>
+                                    <link url="#D12">D12</link>
+                                    <link url="#D3">D3</link>
+                                    <link url="#D6">D6</link>
+                                    <link url="#D7">D7</link>
+                                    <link url="#D8">D8</link>
+                                    <link url="#D15">D15</link>
+                                    <link url="#D17">D17</link>
+                                    <link url="#D18">D18</link>
+                                    <link url="#D19">D19</link>
+                                    <link url="#D21">D21</link>
+                                    <link url="#D22">D22</link>
+                                    <link url="#D27">D27</link>
+                                    <link url="#D28">D28</link>
+                                    <link url="#D30">D30</link>
+                                    <link url="#D32">D32</link>
+                                    <link url="#D35">D35</link>
+                                    <link url="#D36">D36</link>
+                                    <link url="#D37">D37</link>
+                            </odkazy>
+                            <kategorie_popis>A - Positive query on at least two joined tables</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>AR</kategorie>
+                            <odkazy>
+                                    <link url="#D1">D1</link>
+                                    <link url="#D10">D10</link>
+                                    <link url="#D11">D11</link>
+                                    <link url="#D12">D12</link>
+                                    <link url="#D3">D3</link>
+                                    <link url="#D6">D6</link>
+                                    <link url="#D7">D7</link>
+                                    <link url="#D27">D27</link>
+                                    <link url="#D35">D35</link>
+                                    <link url="#D37">D37</link>
+                            </odkazy>
+                            <kategorie_popis>A (RA) - Positive query on at least two joined tables</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>B</kategorie>
+                            <odkazy>
+                                    <link url="#D11">D11</link>
+                            </odkazy>
+                            <kategorie_popis>B - Negative query on at least two joined tables</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>C</kategorie>
+                            <odkazy>
+                                    <link url="#D10">D10</link>
+                            </odkazy>
+                            <kategorie_popis>C - Select only those related to...</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>D1</kategorie>
+                            <odkazy>
+                                    <link url="#D6">D6</link>
+                            </odkazy>
+                            <kategorie_popis>D1 - Select all related to - universal quantification query</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>D2</kategorie>
+                            <odkazy>
+                                    <link url="#D7">D7</link>
+                            </odkazy>
+                            <kategorie_popis>D2 - Result check of D1 query</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>F1</kategorie>
+                            <odkazy>
+                                    <link url="#D19">D19</link>
+                                    <link url="#D21">D21</link>
+                                    <link url="#D32">D32</link>
+                            </odkazy>
+                            <kategorie_popis>F1 - JOIN ON</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>F2</kategorie>
+                            <odkazy>
+                                    <link url="#D1">D1</link>
+                                    <link url="#D10">D10</link>
+                                    <link url="#D11">D11</link>
+                                    <link url="#D12">D12</link>
+                                    <link url="#D2">D2</link>
+                                    <link url="#D3">D3</link>
+                                    <link url="#D6">D6</link>
+                                    <link url="#D7">D7</link>
+                                    <link url="#D8">D8</link>
+                                    <link url="#D17">D17</link>
+                                    <link url="#D18">D18</link>
+                                    <link url="#D22">D22</link>
+                                    <link url="#D27">D27</link>
+                                    <link url="#D28">D28</link>
+                                    <link url="#D30">D30</link>
+                                    <link url="#D35">D35</link>
+                                    <link url="#D37">D37</link>
+                            </odkazy>
+                            <kategorie_popis>F2 - NATURAL JOIN|JOIN USING</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>F2R</kategorie>
+                            <odkazy>
+                                    <link url="#D1">D1</link>
+                                    <link url="#D10">D10</link>
+                                    <link url="#D11">D11</link>
+                                    <link url="#D12">D12</link>
+                                    <link url="#D3">D3</link>
+                                    <link url="#D6">D6</link>
+                                    <link url="#D7">D7</link>
+                                    <link url="#D27">D27</link>
+                                    <link url="#D35">D35</link>
+                                    <link url="#D37">D37</link>
+                            </odkazy>
+                            <kategorie_popis>F2 (RA) - NATURAL JOIN|JOIN USING</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>F3</kategorie>
+                            <odkazy>
+                                    <link url="#D14">D14</link>
+                                    <link url="#D17">D17</link>
+                            </odkazy>
+                            <kategorie_popis>F3 - CROSS JOIN</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>F4</kategorie>
+                            <odkazy>
+                                    <link url="#D8">D8</link>
+                                    <link url="#D15">D15</link>
+                                    <link url="#D22">D22</link>
+                                    <link url="#D36">D36</link>
+                            </odkazy>
+                            <kategorie_popis>F4 - LEFT|RIGHT OUTER JOIN</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>F5</kategorie>
+                            <odkazy>
+                                    <link url="#D15">D15</link>
+                            </odkazy>
+                            <kategorie_popis>F5 - FULL (OUTER) JOIN</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>G1</kategorie>
+                            <odkazy>
+                                    <link url="#D2">D2</link>
+                                    <link url="#D16">D16</link>
+                                    <link url="#D26">D26</link>
+                                    <link url="#D31">D31</link>
+                                    <link url="#D32">D32</link>
+                                    <link url="#D34">D34</link>
+                                    <link url="#D39">D39</link>
+                            </odkazy>
+                            <kategorie_popis>G1 - Nested query in WHERE clause</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>G2</kategorie>
+                            <odkazy>
+                                    <link url="#D10">D10</link>
+                                    <link url="#D12">D12</link>
+                                    <link url="#D3">D3</link>
+                                    <link url="#D17">D17</link>
+                                    <link url="#D27">D27</link>
+                                    <link url="#D34">D34</link>
+                                    <link url="#D35">D35</link>
+                            </odkazy>
+                            <kategorie_popis>G2 - Nested query in FROM clause</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>G2R</kategorie>
+                            <odkazy>
+                                    <link url="#D10">D10</link>
+                                    <link url="#D12">D12</link>
+                                    <link url="#D3">D3</link>
+                                    <link url="#D27">D27</link>
+                                    <link url="#D35">D35</link>
+                            </odkazy>
+                            <kategorie_popis>G2 (RA) - Nested query in FROM clause</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>G3</kategorie>
+                            <odkazy>
+                                    <link url="#D18">D18</link>
+                                    <link url="#D22">D22</link>
+                            </odkazy>
+                            <kategorie_popis>G3 - Nested query in SELECT clause</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>G4</kategorie>
+                            <odkazy>
+                                    <link url="#D2">D2</link>
+                                    <link url="#D34">D34</link>
+                            </odkazy>
+                            <kategorie_popis>G4 - Relative nested query (EXISTS|NOT EXISTS)</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>H1</kategorie>
+                            <odkazy>
+                                    <link url="#D21">D21</link>
+                            </odkazy>
+                            <kategorie_popis>H1 - Set unification - UNION</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>H2</kategorie>
+                            <odkazy>
+                                    <link url="#D11">D11</link>
+                                    <link url="#D2">D2</link>
+                                    <link url="#D7">D7</link>
+                                    <link url="#D17">D17</link>
+                                    <link url="#D34">D34</link>
+                            </odkazy>
+                            <kategorie_popis>H2 - Set difference - MINUS or EXCEPT</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>H2R</kategorie>
+                            <odkazy>
+                                    <link url="#D11">D11</link>
+                                    <link url="#D7">D7</link>
+                            </odkazy>
+                            <kategorie_popis>H2 (RA) - Set difference - MINUS or EXCEPT</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>H3</kategorie>
+                            <odkazy>
+                                    <link url="#D36">D36</link>
+                            </odkazy>
+                            <kategorie_popis>H3 - Set intersection - INTERSECT</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>I1</kategorie>
+                            <odkazy>
+                                    <link url="#D18">D18</link>
+                                    <link url="#D22">D22</link>
+                                    <link url="#D23">D23</link>
+                                    <link url="#D26">D26</link>
+                                    <link url="#D30">D30</link>
+                                    <link url="#D39">D39</link>
+                            </odkazy>
+                            <kategorie_popis>I1 - Aggregate functions (count|sum|min|max|avg)</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>I2</kategorie>
+                            <odkazy>
+                                    <link url="#D22">D22</link>
+                                    <link url="#D23">D23</link>
+                                    <link url="#D30">D30</link>
+                            </odkazy>
+                            <kategorie_popis>I2 - Aggregate function over grouped rows - GROUP BY (HAVING)</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>J</kategorie>
+                            <odkazy>
+                                    <link url="#D2">D2</link>
+                            </odkazy>
+                            <kategorie_popis>J - Same query in 3 different sql statements</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>K</kategorie>
+                            <odkazy>
+                                    <link url="#D30">D30</link>
+                            </odkazy>
+                            <kategorie_popis>K - All clauses in one query - SELECT FROM WHERE GROUP BY HAVING ORDER BY</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>L</kategorie>
+                            <odkazy>
+                                    <link url="#D26">D26</link>
+                                    <link url="#D28">D28</link>
+                            </odkazy>
+                            <kategorie_popis>L - View</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>M</kategorie>
+                            <odkazy>
+                                    <link url="#D28">D28</link>
+                            </odkazy>
+                            <kategorie_popis>M - Query over a view</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>N</kategorie>
+                            <odkazy>
+                                    <link url="#D33">D33</link>
+                            </odkazy>
+                            <kategorie_popis>N - INSERT, which insert a set of rows, which are the result of another subquery (an INSERT command which has VALUES clause replaced by a nested query.</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>O</kategorie>
+                            <odkazy>
+                                    <link url="#D32">D32</link>
+                            </odkazy>
+                            <kategorie_popis>O - UPDATE with nested SELECT statement</kategorie_popis>
+                        </radek>
+                        <radek>
+                            <kategorie>P</kategorie>
+                            <odkazy>
+                                    <link url="#D31">D31</link>
+                            </odkazy>
+                            <kategorie_popis>P - DELETE with nested SELECT statement</kategorie_popis>
+                        </radek>
+            </pokryti_dotazu>
+        </queries>
+        <scripts>
+            <title>Scripts</title>
+            <para>
+                <link url="./create.sql">create.sql</link>
+            </para>
+            <para>
+                <link url="./insert.sql">insert.sql</link>
+            </para>
+        </scripts>
+        <conclussions>
+            <title>Conclusion</title>
+                    <para>By doing this semestral project I can say that I got some practical experience  in working with SQL, creating database,   creating connection between data with respect to business requerements and some syntax of RA and SQL request.</para>
+                    <para>Thinking to improve further  my  knowledge on DBS  by my ownself because planning to work in data science field.</para>
+                    <para></para>
+                    <para></para>
+        </conclussions>
+        <references>
+            <title>References</title>
+                    <para>http://users.fit.cvut.cz/~valenta/bie-dbs/semproject-local/main.xml</para>
+        </references>
+    </content>
+</sproject>
