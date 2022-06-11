@@ -1,0 +1,31 @@
+ASTBase-----|ExpressionASTBase--									DataType--------|-Array	   ( start, last, array )					   					
+	 		|					|-NumberExpression    ( Val)		   				\-Integer  
+	 		|					|-BinOpExpression     ( LHS,RHS, Op)
+	 		|					|-FunctCallExpression ( Name, Param )
+	 		|					\-VariableExprBase-----------
+	 		|												|-ArrayExpression    ( Variable, Index )
+	 		|												|-VariableExpression ( Name )
+	 		|Statement-------				
+	 		|     				|-AssignStatement     ( Var, Val )			
+			|     				|-IfStatement	 	  ( Condition, Then, Elsebody		
+			|     				|-ForStatement	 	  ( Variable, Start, End, Elsebody )		
+	    	|         			|-WhileStatement	  ( Condition Dobody )
+			|					|-BreakStatement
+			|					|-ExitStatement
+			|     				\-BuiltinFunctionsCall ( Name, Parameters ) 
+	 		|
+			|DeclarationASTBase--
+	 		|					|-VarDeclaration 	    ( Type, Name )
+	 		|					|-ConstDeclaration      ( Name, Val )
+	 		|					|-FunctDeclaration 	    ( Proto, Declaration, Body )
+			|					|-ProceduralDeclaration ( Proto, Declaration, Body )
+	 		|
+			|StatementListBase  ( Statement )
+        	|FunctionProto   ( Name, Arg, RetType )     
+        	|ProceduralProto ( Name, Arg )
+			\Program			( Name, Declaration, Body )
+
+
+
+				
+						
