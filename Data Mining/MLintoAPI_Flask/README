@@ -1,0 +1,2 @@
+Creating a simple API from a machine learning model in Python using Flask.
+For test of API helped app Postman. The result of prediction for request is saved in file responce.json
