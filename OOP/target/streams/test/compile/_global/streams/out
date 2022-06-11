@@ -1,0 +1,24 @@
+[error] /home/nuray/Documents/OOP/bie_oop_ascii_art/src/test/scala/AsciifierTest.scala:4:8: object Funsite is not a member of package org.scalatest
+[error] did you mean FunSuite?
+[error] import org.scalatest.Funsite
+[error]        ^
+[error] /home/nuray/Documents/OOP/bie_oop_ascii_art/src/test/scala/AsciifierTest.scala:6:29: not found: type Funsite
+[error] class AsciifierTest extends Funsite {
+[error]                             ^
+[error] /home/nuray/Documents/OOP/bie_oop_ascii_art/src/test/scala/AsciifierTest.scala:7:3: not found: value test
+[error]   test("Testing")
+[error]   ^
+[error] /home/nuray/Documents/OOP/bie_oop_ascii_art/src/test/scala/AsciifierTest.scala:10:10: not found: value asciiArt
+[error]   assert(asciiArt)
+[error]          ^
+[error] /home/nuray/Documents/OOP/bie_oop_ascii_art/src/test/scala/MainTest/MainTest.scala:3:8: object Funsuite is not a member of package org.scalatest
+[error] did you mean FunSuite?
+[error] import org.scalatest.Funsuite
+[error]        ^
+[error] /home/nuray/Documents/OOP/bie_oop_ascii_art/src/test/scala/MainTest/MainTest.scala:5:24: not found: type FunSuite
+[error] class MainTest extends FunSuite {
+[error]                        ^
+[error] /home/nuray/Documents/OOP/bie_oop_ascii_art/src/test/scala/MainTest/MainTest.scala:6:3: not found: value test
+[error]   test("Foo"){ }}
+[error]   ^
+[error] 7 errors found
