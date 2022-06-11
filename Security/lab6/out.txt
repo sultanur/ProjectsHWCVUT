@@ -1,0 +1,47 @@
+HTTP/1.1 301 Moved Permanently
+Server: nginx
+Date: Mon, 10 May 2021 19:46:37 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: close
+X-Powered-By: PHP/7.2.27-5+0~20200202.35+debian10~1.gbp2925f8, pimcore
+X-Pimcore-ID: 299
+Location: https://old.fit.cvut.cz/en/student/forms
+Strict-Transport-Security: max-age=315360000
+
+411
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="refresh" content="0;url='https://old.fit.cvut.cz/en/student/forms'" />
+
+        <title>Redirecting to https://old.fit.cvut.cz/en/student/forms</title>
+    
+<script>
+    
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    
+            ga('create', 'UA-16686014-1');
+    
+    ga('set', 'anonymizeIp', true);
+    
+    
+        if (typeof _gaqPageView != "undefined"){
+        ga('send', 'pageview', _gaqPageView);
+    } else {
+                ga('send', 'pageview');
+            }
+    
+        </script>
+</head>
+    <body>
+        Redirecting to <a href="https://old.fit.cvut.cz/en/student/forms">https://old.fit.cvut.cz/en/student/forms</a>.
+    </body>
+</html>
+0
+

@@ -1,0 +1,12 @@
+answer to questions #7 and #7:
+6) In the affine cipher (a*p+b), how many unique keys exist for a given alphabet?
+
+Answer is 312, because a and 26 are needs to be coprimes, so in mod 26 there  are only 12 numbers can be as a, and b out of 26 letters, so 12*26 = 312 uniqie keys exists.
+
+7)In the transposition cipher, the obvious weak point is the way the message is padded to length. How would you handle this weakness?
+
+This weakness can be solved by making padding undefinable, for example using different symbols for padding, by using not rarely using symbols such that X, Z etc.
+Transposition cipher is very easy to break, but this cipher can be  strengthen by using double transposition, f.e. a columnar transposition applied twice, the same key can be used for both transpositions, or two different keys. 
+    Also combination of two ciphers will strengthen, f.e. by taking a rotating substitution cipher, and doing  transpositions both before and after the substitution. 
+  
+ 
