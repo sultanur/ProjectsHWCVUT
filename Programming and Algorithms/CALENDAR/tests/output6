@@ -1,0 +1,271 @@
+
+
+             #####         #        #           #######     #     #     ######         #        ######
+            #     #       # #       #           #           ##    #     #     #       # #       #     #
+            #            #   #      #           #           # #   #     #     #      #   #      #     #
+            #           #     #     #           #####       #  #  #     #     #     #     #     ######
+            #           #######     #           #           #   # #     #     #     #######     #   #
+            #     #     #     #     #           #           #    ##     #     #     #     #     #    #
+             #####      #     #     #######     #######     #     #     ######      #     #     #     #
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+
+Enter following info for Event creation
+
+
+
+TITLE of Event: Choose the Event Type :
+TYPE 1: Important Event
+TYPE 2: Movable Event
+TYPE 3: Optional Event
+
+
+Day: Month: Year:
+
+Hour: Minute: Duration  of Event in minutes: Place:  Number of Participants: Name of Participant: Set up recurrence for event? [Y|N]: Choose recurrence cycle:
+1: EVERY WEEK
+2: EVERY 14 DAYS
+3: EVERY MONTH
+Set limit to recurrence: Notice of Event Importance: Display entered data? [Y|N]:
+---------------IMPORTANT EVENT---------------
+Notice:                 Championship
+Title:                  Sport
+Type:                   Important
+Place:                  Station 2
+Date:                   2023-02-03
+Start Time:             12:00
+Duration:               50 minutes
+Finish Time:            12:50
+Number of Participants: 1
+Participant's name:
+                     1) Sportsmen1
+
+
+Save created event? [Y|N]:
+
+Your event successfully added to the Calendar
+Recurrence date(s):
+                      1) 2023-02-17
+                      2) 2023-03-03
+                      3) 2023-03-17
+                      4) 2023-03-31
+                      5) 2023-04-14
+
+
+Do you want to create another Event? [Y|N]:
+Enter following info for Event creation
+
+
+
+TITLE of Event: Choose the Event Type :
+TYPE 1: Important Event
+TYPE 2: Movable Event
+TYPE 3: Optional Event
+
+
+Day: Month: Year:
+
+Hour: Minute: Duration  of Event in minutes: Place:  Number of Participants: Name of Participant: Name of Participant: Name of Participant: Name of Participant: Name of Participant: Set up recurrence for event? [Y|N]: Choose recurrence cycle:
+1: EVERY WEEK
+2: EVERY 14 DAYS
+3: EVERY MONTH
+Set limit to recurrence: Set Moves Limit: Display entered data? [Y|N]:
+------------------MOVABLE EVENT------------------
+Moves Limit:            3
+Title:                  Meeting
+Type:                   MoveAble
+Place:                  CVUT
+Date:                   2023-02-03
+Start Time:             04:20
+Duration:               60 minutes
+Finish Time:            05:20
+Number of Participants: 5
+Participant's name:
+                     1) Student1
+                     2) Student2
+                     3) Student3
+                     4) Student4
+                     5) Student5
+
+
+Save created event? [Y|N]:
+
+Your event successfully added to the Calendar
+Recurrence date(s):
+                      1) 2023-02-17
+
+
+Do you want to create another Event? [Y|N]:
+Enter following info for Event creation
+
+
+
+TITLE of Event: Choose the Event Type :
+TYPE 1: Important Event
+TYPE 2: Movable Event
+TYPE 3: Optional Event
+
+
+Day: Month: Year:
+
+Hour: Minute: Duration  of Event in minutes: Place:  Number of Participants: Name of Participant: Name of Participant: Set up recurrence for event? [Y|N]: Choose recurrence cycle:
+1: EVERY WEEK
+2: EVERY 14 DAYS
+3: EVERY MONTH
+Set limit to recurrence: Display entered data? [Y|N]:
+-------------------OPTIONAL EVENT-------------------
+Title:                  Swimming
+Type:                   Optional
+Place:                  Aquacentrum Bohumín
+Date:                   2024-12-02
+Start Time:             12:10
+Duration:               20 minutes
+Finish Time:            12:30
+Number of Participants: 2
+Participant's name:
+                     1) Friend1
+                     2) Friend2
+
+
+Save created event? [Y|N]:
+
+Your event successfully added to the Calendar
+Recurrence date(s):
+                      1) 2025-01-01
+                      2) 2025-01-31
+                      3) 2025-03-02
+                      4) 2025-04-01
+                      5) 2025-05-01
+
+
+Do you want to create another Event? [Y|N]:
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+Enter Event Title:
+Enter date you want to make changes:
+
+Day: Month: Year: Print all occupied time for 2023-02-03 [Y|N]?
+Occupied time for date 2023-02-03:
+
+Event Important  Title Sport  from  12:00 to 12:50
+Event MoveAble  Title Meeting  from  04:20 to 05:20
+
+Change time for event Swimming  to free slot in 2023-02-03 ? [Y|N]  Change to occupied time? [Y|N]
+Enter new desired  time for event  Swimming in 2023-02-03
+
+Hour: Minute: Entered date and time is occupied by event:  Title:                  Meeting
+Type:                   MoveAble
+Place:                  CVUT
+Date:                   2023-02-03
+Start Time:             04:20
+Duration:               60 minutes
+Finish Time:            05:20
+Number of Participants: 5
+Participant's name:
+                     1) Student1
+                     2) Student2
+                     3) Student3
+                     4) Student4
+                     5) Student5
+
+
+Move this event to a new date? [Y|N]  Enter a date and time to move event
+
+Day: Month: Year:
+
+Hour: Minute: MOVEABLE EVENT
+Event moved successfully to a new date and time
+Display event with a new date and time? [Y|N]
+
+Moves limit:            2
+Title:                  Meeting
+Type:                   MoveAble
+Place:                  CVUT
+Date:                   2024-12-12
+Start Time:             05:10
+Duration:               60 minutes
+Finish Time:            06:10
+Number of Participants: 5
+Participant's name:
+                     1) Student1
+                     2) Student2
+                     3) Student3
+                     4) Student4
+                     5) Student5
+
+
+Set up to freed time Swimming  event ? [Y|N]  Setting changes for Optional EVent
+Event moved successfully to a new date and time
+Display event with a new date and time? [Y|N]
+
+Title:                  Swimming
+Type:                   Optional
+Place:                  Aquacentrum Bohumín
+Date:                   2023-02-03
+Start Time:             05:10
+Duration:               20 minutes
+Finish Time:            05:30
+Number of Participants: 2
+Participant's name:
+                     1) Friend1
+                     2) Friend2
+
+
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation

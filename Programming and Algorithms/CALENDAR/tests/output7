@@ -1,0 +1,438 @@
+
+
+             #####         #        #           #######     #     #     ######         #        ######
+            #     #       # #       #           #           ##    #     #     #       # #       #     #
+            #            #   #      #           #           # #   #     #     #      #   #      #     #
+            #           #     #     #           #####       #  #  #     #     #     #     #     ######
+            #           #######     #           #           #   # #     #     #     #######     #   #
+            #     #     #     #     #           #           #    ##     #     #     #     #     #    #
+             #####      #     #     #######     #######     #     #     ######      #     #     #     #
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+
+Enter following info for Event creation
+
+
+
+TITLE of Event: Choose the Event Type :
+TYPE 1: Important Event
+TYPE 2: Movable Event
+TYPE 3: Optional Event
+
+
+Day: Month: Year:
+
+Hour: Minute: Duration  of Event in minutes: Place:  Number of Participants: Name of Participant: Set up recurrence for event? [Y|N]: Choose recurrence cycle:
+1: EVERY WEEK
+2: EVERY 14 DAYS
+3: EVERY MONTH
+Set limit to recurrence: Notice of Event Importance: Display entered data? [Y|N]:
+---------------IMPORTANT EVENT---------------
+Notice:                 job position
+Title:                  Interview
+Type:                   Important
+Place:                  Company1
+Date:                   2023-03-10
+Start Time:             12:00
+Duration:               30 minutes
+Finish Time:            12:30
+Number of Participants: 1
+Participant's name:
+                     1) Malina Klarence
+
+
+Save created event? [Y|N]:
+
+Your event successfully added to the Calendar
+Recurrence date(s):
+                      1) 2023-03-17
+
+
+Do you want to create another Event? [Y|N]:
+Enter following info for Event creation
+
+
+
+TITLE of Event: Choose the Event Type :
+TYPE 1: Important Event
+TYPE 2: Movable Event
+TYPE 3: Optional Event
+
+
+Day: Month: Year:
+
+Hour: Minute: Duration  of Event in minutes: Place:  Number of Participants: Name of Participant: Name of Participant: Set up recurrence for event? [Y|N]: Choose recurrence cycle:
+1: EVERY WEEK
+2: EVERY 14 DAYS
+3: EVERY MONTH
+Set limit to recurrence: Set Moves Limit: Display entered data? [Y|N]:
+------------------MOVABLE EVENT------------------
+Moves Limit:            3
+Title:                  Meeting with Prof
+Type:                   MoveAble
+Place:                  CVUT
+Date:                   2022-04-03
+Start Time:             09:00
+Duration:               20 minutes
+Finish Time:            09:20
+Number of Participants: 2
+Participant's name:
+                     1) Student
+                     2) Supervisor
+
+
+Save created event? [Y|N]:
+
+Your event successfully added to the Calendar
+Recurrence date(s):
+                      1) 2022-04-10
+
+
+Do you want to create another Event? [Y|N]:
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+Enter Event Title:
+Enter date you want to make changes:
+
+Day: Month: Year: Print all occupied time for 2022-04-03 [Y|N]?
+Occupied time for date 2022-04-03:
+
+Event MoveAble  Title Meeting with Prof  from  09:00 to 09:20
+
+Change time for event Interview  to free slot in 2022-04-03 ? [Y|N]  Enter a new ( free ) time for event Interview
+
+
+Hour: Minute: It is Important Event, cannot make any changes
+Print all occupied time for 2022-04-03 [Y|N]?  Change time anyway for event Interview ? [Y|N]
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+Enter Event Title:
+Enter date you want to make changes:
+
+Day: Month: Year: Print all occupied time for 2022-04-03 [Y|N]?
+Occupied time for date 2022-04-03:
+
+Event MoveAble  Title Meeting with Prof  from  09:00 to 09:20
+
+Change time for event Meeting with Prof  to free slot in 2022-04-03 ? [Y|N]  Change to occupied time? [Y|N]
+Enter new desired  time for event  Meeting with Prof in 2022-04-03
+
+Hour: Minute: Entered date is not occupied. Change to a new date and time? [Y|N]  MOVEABLE EVENT
+Event moved successfully to a new date and time
+Display event with a new date and time? [Y|N]
+
+Moves limit:            2
+Title:                  Meeting with Prof
+Type:                   MoveAble
+Place:                  CVUT
+Date:                   2022-04-03
+Start Time:             10:02
+Duration:               20 minutes
+Finish Time:            10:22
+Number of Participants: 2
+Participant's name:
+                     1) Student
+                     2) Supervisor
+
+
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+
+Chose type for Importing Event
+Choose the Event Type :
+TYPE 1: Important Event
+TYPE 2: Movable Event
+TYPE 3: Optional Event
+Set up recurrence for Importing Event? [Y|N]: Choose recurrence cycle:
+1: EVERY WEEK
+2: EVERY 14 DAYS
+3: EVERY MONTH
+Set limit to recurrence: Set Moves Limit: Display entered data? [Y|N]:
+------------------MOVABLE EVENT------------------
+Moves Limit:            3
+Title:                  Meeting with friends
+Type:                   MoveAble
+Place:                  Zikova 23/12
+Date:                   2022-03-02
+Start Time:             04:10
+Duration:               10 minutes
+Finish Time:            04:20
+Number of Participants: 3
+Participant's name:
+                     1) Pavel Mask
+                     2) Ilon Kravno
+                     3) David Albert
+
+
+Save created event? [Y|N]:
+
+Your event successfully added to the Calendar
+Recurrence date(s):
+                      1) 2022-03-09
+                      2) 2022-03-16
+                      3) 2022-03-23
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+Choose the Event Type :
+TYPE 1: Important Event
+TYPE 2: Movable Event
+TYPE 3: Optional Event
+Title:                  Meeting with Prof
+Type:                   MoveAble
+Place:                  CVUT
+Date:                   2022-04-03
+Start Time:             10:02
+Duration:               20 minutes
+Finish Time:            10:22
+Number of Participants: 2
+Participant's name:
+                     1) Student
+                     2) Supervisor
+
+Title:                  Meeting with Prof
+Type:                   MoveAble
+Place:                  CVUT
+Date:                   2022-04-10
+Start Time:             09:00
+Duration:               20 minutes
+Finish Time:            09:20
+Number of Participants: 2
+Participant's name:
+                     1) Student
+                     2) Supervisor
+
+Title:                  Meeting with friends
+Type:                   MoveAble
+Place:                  Zikova 23/12
+Date:                   2022-03-02
+Start Time:             04:10
+Duration:               10 minutes
+Finish Time:            04:20
+Number of Participants: 3
+Participant's name:
+                     1) Pavel Mask
+                     2) Ilon Kravno
+                     3) David Albert
+
+Title:                  Meeting with friends
+Type:                   MoveAble
+Place:                  Zikova 23/12
+Date:                   2022-03-09
+Start Time:             04:10
+Duration:               10 minutes
+Finish Time:            04:20
+Number of Participants: 3
+Participant's name:
+                     1) Pavel Mask
+                     2) Ilon Kravno
+                     3) David Albert
+
+Title:                  Meeting with friends
+Type:                   MoveAble
+Place:                  Zikova 23/12
+Date:                   2022-03-16
+Start Time:             04:10
+Duration:               10 minutes
+Finish Time:            04:20
+Number of Participants: 3
+Participant's name:
+                     1) Pavel Mask
+                     2) Ilon Kravno
+                     3) David Albert
+
+Title:                  Meeting with friends
+Type:                   MoveAble
+Place:                  Zikova 23/12
+Date:                   2022-03-23
+Start Time:             04:10
+Duration:               10 minutes
+Finish Time:            04:20
+Number of Participants: 3
+Participant's name:
+                     1) Pavel Mask
+                     2) Ilon Kravno
+                     3) David Albert
+
+Overall 6 MoveAble Event(s)
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+Enter Event Title:
+Enter date you want to make changes:
+
+Day: Month: Year: Print all occupied time for 2022-04-03 [Y|N]?
+Occupied time for date 2022-04-03:
+
+Event MoveAble  Title Meeting with Prof  from  10:02 to 10:22
+
+Change time for event Interview  to free slot in 2022-04-03 ? [Y|N]  Change to occupied time? [Y|N]
+Enter new desired  time for event  Interview in 2022-04-03
+
+Hour: Minute: Entered date and time is occupied by event:  Title:                  Meeting with Prof
+Type:                   MoveAble
+Place:                  CVUT
+Date:                   2022-04-03
+Start Time:             10:02
+Duration:               20 minutes
+Finish Time:            10:22
+Number of Participants: 2
+Participant's name:
+                     1) Student
+                     2) Supervisor
+
+
+Move this event to a new date? [Y|N]  Enter a date and time to move event
+
+Day: Month: Year:
+
+Hour: Minute: MOVEABLE EVENT
+Event moved successfully to a new date and time
+Display event with a new date and time? [Y|N]
+
+Moves limit:            1
+Title:                  Meeting with Prof
+Type:                   MoveAble
+Place:                  CVUT
+Date:                   2023-09-23
+Start Time:             12:00
+Duration:               20 minutes
+Finish Time:            12:20
+Number of Participants: 2
+Participant's name:
+                     1) Student
+                     2) Supervisor
+
+
+Set up to freed time Interview  event ? [Y|N]  It is Important Event, cannot make any changes
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation

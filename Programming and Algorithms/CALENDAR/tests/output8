@@ -1,0 +1,491 @@
+
+
+             #####         #        #           #######     #     #     ######         #        ######
+            #     #       # #       #           #           ##    #     #     #       # #       #     #
+            #            #   #      #           #           # #   #     #     #      #   #      #     #
+            #           #     #     #           #####       #  #  #     #     #     #     #     ######
+            #           #######     #           #           #   # #     #     #     #######     #   #
+            #     #     #     #     #           #           #    ##     #     #     #     #     #    #
+             #####      #     #     #######     #######     #     #     ######      #     #     #     #
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+
+Enter following info for Event creation
+
+
+
+TITLE of Event: Choose the Event Type :
+TYPE 1: Important Event
+TYPE 2: Movable Event
+TYPE 3: Optional Event
+
+
+Day: Month: Year:
+
+Hour: Minute: Duration  of Event in minutes: Place:  Number of Participants: Name of Participant: Name of Participant: Name of Participant: Name of Participant: Name of Participant: Set up recurrence for event? [Y|N]: Choose recurrence cycle:
+1: EVERY WEEK
+2: EVERY 14 DAYS
+3: EVERY MONTH
+Set limit to recurrence: Set Moves Limit: Display entered data? [Y|N]:
+------------------MOVABLE EVENT------------------
+Moves Limit:            4
+Title:                  Party
+Type:                   MoveAble
+Place:                  Park
+Date:                   2023-03-02
+Start Time:             12:15
+Duration:               50 minutes
+Finish Time:            13:05
+Number of Participants: 5
+Participant's name:
+                     1) Friend1
+                     2) Friend2
+                     3) Friend3
+                     4) Friend4
+                     5) Friend5
+
+
+Save created event? [Y|N]:
+
+Your event successfully added to the Calendar
+Recurrence date(s):
+                      1) 2023-04-01
+                      2) 2023-05-01
+                      3) 2023-05-31
+
+
+Do you want to create another Event? [Y|N]:
+Enter following info for Event creation
+
+
+
+TITLE of Event: Choose the Event Type :
+TYPE 1: Important Event
+TYPE 2: Movable Event
+TYPE 3: Optional Event
+
+
+Day: Month: Year:
+
+Hour: Minute: Duration  of Event in minutes: Place:  Number of Participants: Set up recurrence for event? [Y|N]: Choose recurrence cycle:
+1: EVERY WEEK
+2: EVERY 14 DAYS
+3: EVERY MONTH
+Set limit to recurrence: Notice of Event Importance: Display entered data? [Y|N]:
+---------------IMPORTANT EVENT---------------
+Notice:                 Preparing to run 10 km
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-04-03
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+
+Save created event? [Y|N]:
+
+Your event successfully added to the Calendar
+Recurrence date(s):
+                      1) 2023-04-10
+                      2) 2023-04-17
+                      3) 2023-04-24
+                      4) 2023-05-01
+                      5) 2023-05-08
+                      6) 2023-05-15
+                      7) 2023-05-22
+                      8) 2023-05-29
+                      9) 2023-06-05
+                      10) 2023-06-12
+                      11) 2023-06-19
+                      12) 2023-06-26
+                      13) 2023-07-03
+                      14) 2023-07-10
+                      15) 2023-07-17
+                      16) 2023-07-24
+                      17) 2023-07-31
+                      18) 2023-08-07
+                      19) 2023-08-14
+                      20) 2023-08-21
+
+
+Do you want to create another Event? [Y|N]:
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+Enter Date and Time to find in Calendar in order to delete
+
+Day: Month: Year:
+
+Hour: Minute: There is no Event in  2024-05-04  at  12:00  to delete from Calendar
+
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+Enter Date and Time to find in Calendar in order to delete
+
+Day: Month: Year:
+
+Hour: Minute: Event for 2023-03-02 12:15 is successfully deleted from Calendar
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+Choose the Event Type :
+TYPE 1: Important Event
+TYPE 2: Movable Event
+TYPE 3: Optional Event
+Title:                  Party
+Type:                   MoveAble
+Place:                  Park
+Date:                   2023-04-01
+Start Time:             12:15
+Duration:               50 minutes
+Finish Time:            13:05
+Number of Participants: 5
+Participant's name:
+                     1) Friend1
+                     2) Friend2
+                     3) Friend3
+                     4) Friend4
+                     5) Friend5
+
+Title:                  Party
+Type:                   MoveAble
+Place:                  Park
+Date:                   2023-05-01
+Start Time:             12:15
+Duration:               50 minutes
+Finish Time:            13:05
+Number of Participants: 5
+Participant's name:
+                     1) Friend1
+                     2) Friend2
+                     3) Friend3
+                     4) Friend4
+                     5) Friend5
+
+Title:                  Party
+Type:                   MoveAble
+Place:                  Park
+Date:                   2023-05-31
+Start Time:             12:15
+Duration:               50 minutes
+Finish Time:            13:05
+Number of Participants: 5
+Participant's name:
+                     1) Friend1
+                     2) Friend2
+                     3) Friend3
+                     4) Friend4
+                     5) Friend5
+
+Overall 3 MoveAble Event(s)
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+Choose the Event Type :
+TYPE 1: Important Event
+TYPE 2: Movable Event
+TYPE 3: Optional Event
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-04-03
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-04-10
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-04-17
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-04-24
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-05-01
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-05-08
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-05-15
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-05-22
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-05-29
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-06-05
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-06-12
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-06-19
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-06-26
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-07-03
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-07-10
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-07-17
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-07-24
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-07-31
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-08-07
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-08-14
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Title:                  Jym
+Type:                   Important
+Place:                  Factory Jym
+Date:                   2023-08-21
+Start Time:             10:30
+Duration:               60 minutes
+Finish Time:            11:30
+Number of Participants: 0
+
+Overall 21 Important Event(s)
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation

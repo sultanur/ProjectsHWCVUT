@@ -1,0 +1,113 @@
+
+             #####         #        #           #######     #     #     ######         #        ######
+            #     #       # #       #           #           ##    #     #     #       # #       #     #
+            #            #   #      #           #           # #   #     #     #      #   #      #     #
+            #           #     #     #           #####       #  #  #     #     #     #     #     ######
+            #           #######     #           #           #   # #     #     #     #######     #   #
+            #     #     #     #     #           #           #    ##     #     #     #     #     #    #
+             #####      #     #     #######     #######     #     #     ######      #     #     #     #
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+
+
+Month
+Year
+2
+                   Monthly Calendar
+                    February 2022
+|----------------------------------------------------------------|
+    SUN     MON     TUE     WED     THU     FRI     SAT
+|----------------------------------------------------------------|
+                       1       2       3       4       5
+       6       7       8       9      10      11      12
+      13      14      15      16      17      18      19
+      20      21      22      23      24      25      26
+      27      28      29
+
+
+
+
+
+Again ? [Y/N]:
+
+
+Month
+Year
+1
+                   Monthly Calendar
+                    March 2027
+|----------------------------------------------------------------|
+    SUN     MON     TUE     WED     THU     FRI     SAT
+|----------------------------------------------------------------|
+               1       2       3       4       5       6
+       7       8       9      10      11      12      13
+      14      15      16      17      18      19      20
+      21      22      23      24      25      26      27
+      28      29      30      31
+
+
+
+
+
+Again ? [Y/N]:
+
+
+Month
+Year
+1
+                   Monthly Calendar
+                    May 2028
+|----------------------------------------------------------------|
+    SUN     MON     TUE     WED     THU     FRI     SAT
+|----------------------------------------------------------------|
+               1       2       3       4       5       6
+       7       8       9      10      11      12      13
+      14      15      16      17      18      19      20
+      21      22      23      24      25      26      27
+      28      29      30      31
+
+
+
+
+
+Again ? [Y/N]:
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation

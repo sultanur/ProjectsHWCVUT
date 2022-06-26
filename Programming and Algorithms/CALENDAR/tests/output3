@@ -1,0 +1,184 @@
+
+
+             #####         #        #           #######     #     #     ######         #        ######
+            #     #       # #       #           #           ##    #     #     #       # #       #     #
+            #            #   #      #           #           # #   #     #     #      #   #      #     #
+            #           #     #     #           #####       #  #  #     #     #     #     #     ######
+            #           #######     #           #           #   # #     #     #     #######     #   #
+            #     #     #     #     #           #           #    ##     #     #     #     #     #    #
+             #####      #     #     #######     #######     #     #     ######      #     #     #     #
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+
+Enter following info for Event creation
+
+
+
+TITLE of Event: Choose the Event Type :
+TYPE 1: Important Event
+TYPE 2: Movable Event
+TYPE 3: Optional Event
+
+
+Day: Month: Year:
+
+Hour: Minute: Duration  of Event in minutes: Place:  Number of Participants: Name of Participant: Name of Participant: Name of Participant: Set up recurrence for event? [Y|N]: Choose recurrence cycle:
+1: EVERY WEEK
+2: EVERY 14 DAYS
+3: EVERY MONTH
+Please, enter one of cycle Numbers [1 | 2 | 3 ]
+Continue ? [Y/N]: Choose recurrence cycle:
+1: EVERY WEEK
+2: EVERY 14 DAYS
+3: EVERY MONTH
+Set limit to recurrence: Display entered data? [Y|N]:
+-------------------OPTIONAL EVENT-------------------
+Title:                  Birthday
+Type:                   Optional
+Place:                  Park Zoo
+Date:                   2025-04-02
+Start Time:             12:30
+Duration:               60 minutes
+Finish Time:            13:30
+Number of Participants: 3
+Participant's name:
+                     1) Albina Hreds
+                     2) Karina Klarkson
+                     3) Lina Linarova
+
+
+Save created event? [Y|N]:
+
+Your event successfully added to the Calendar
+Recurrence date(s):
+                      1) 2025-05-02
+                      2) 2025-06-01
+
+
+Do you want to create another Event? [Y|N]:
+Enter following info for Event creation
+
+
+
+TITLE of Event: Choose the Event Type :
+TYPE 1: Important Event
+TYPE 2: Movable Event
+TYPE 3: Optional Event
+
+
+Day: Month: Year:
+
+Hour: Minute: Duration  of Event in minutes: Place:  Number of Participants: Name of Participant: Set up recurrence for event? [Y|N]: Choose recurrence cycle:
+1: EVERY WEEK
+2: EVERY 14 DAYS
+3: EVERY MONTH
+Set limit to recurrence: Set Moves Limit: Display entered data? [Y|N]:
+------------------MOVABLE EVENT------------------
+Moves Limit:            3
+Title:                  Cinema
+Type:                   MoveAble
+Place:                  Oktal
+Date:                   2024-04-03
+Start Time:             12:00
+Duration:               120 minutes
+Finish Time:            14:00
+Number of Participants: 1
+Participant's name:
+                     1) Arbi Claron
+
+
+Save created event? [Y|N]:
+
+Your event successfully added to the Calendar
+Recurrence date(s):
+                      1) 2024-04-10
+                      2) 2024-04-17
+
+
+Do you want to create another Event? [Y|N]:
+Enter following info for Event creation
+
+
+
+TITLE of Event: Choose the Event Type :
+TYPE 1: Important Event
+TYPE 2: Movable Event
+TYPE 3: Optional Event
+
+
+Day: Month: Year:
+Invalid date. Please try again...
+Continue ? [Y/N]:
+
+Day: Month: Year:
+
+Hour: Minute: Duration  of Event in minutes: Place:  Number of Participants: Name of Participant: Name of Participant: Set up recurrence for event? [Y|N]: Choose recurrence cycle:
+1: EVERY WEEK
+2: EVERY 14 DAYS
+3: EVERY MONTH
+Set limit to recurrence: Set Moves Limit: Display entered data? [Y|N]:
+------------------MOVABLE EVENT------------------
+Moves Limit:            3
+Title:                  Meeting with Friends
+Type:                   MoveAble
+Place:                  Library
+Date:                   2022-02-03
+Start Time:             10:10
+Duration:               10 minutes
+Finish Time:            10:20
+Number of Participants: 2
+Participant's name:
+                     1) Classmate 1
+                     2) Classmate 2
+
+
+Save created event? [Y|N]:
+
+Your event successfully added to the Calendar
+Recurrence date(s):
+                      1) 2022-02-10
+                      2) 2022-02-17
+                      3) 2022-02-24
+                      4) 2022-03-03
+
+
+Do you want to create another Event? [Y|N]:
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation

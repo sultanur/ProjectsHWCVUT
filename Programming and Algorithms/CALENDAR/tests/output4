@@ -1,0 +1,248 @@
+
+             #####         #        #           #######     #     #     ######         #        ######
+            #     #       # #       #           #           ##    #     #     #       # #       #     #
+            #            #   #      #           #           # #   #     #     #      #   #      #     #
+            #           #     #     #           #####       #  #  #     #     #     #     #     ######
+            #           #######     #           #           #   # #     #     #     #######     #   #
+            #     #     #     #     #           #           #    ##     #     #     #     #     #    #
+             #####      #     #     #######     #######     #     #     ######      #     #     #     #
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+
+Enter following info for Event creation
+
+
+
+TITLE of Event: Choose the Event Type :
+TYPE 1: Important Event
+TYPE 2: Movable Event
+TYPE 3: Optional Event
+
+
+Day: Month: Year:
+
+Hour: Minute: Duration  of Event in minutes: Place:  Number of Participants: Name of Participant: Name of Participant: Set up recurrence for event? [Y|N]: Choose recurrence cycle:
+1: EVERY WEEK
+2: EVERY 14 DAYS
+3: EVERY MONTH
+Set limit to recurrence: Set Moves Limit: Display entered data? [Y|N]:
+------------------MOVABLE EVENT------------------
+Moves Limit:            3
+Title:                  Meeting
+Type:                   MoveAble
+Place:                  CVUT
+Date:                   2022-04-10
+Start Time:             12:50
+Duration:               20 minutes
+Finish Time:            13:10
+Number of Participants: 2
+Participant's name:
+                     1) Student1
+                     2) Student2
+
+
+Save created event? [Y|N]:
+
+Your event successfully added to the Calendar
+Recurrence date(s):
+                      1) 2022-04-17
+                      2) 2022-04-24
+                      3) 2022-05-01
+
+
+Do you want to create another Event? [Y|N]:
+Enter following info for Event creation
+
+
+
+TITLE of Event: Choose the Event Type :
+TYPE 1: Important Event
+TYPE 2: Movable Event
+TYPE 3: Optional Event
+
+
+Day: Month: Year:
+
+Hour: Minute: Duration  of Event in minutes: Place:  Number of Participants: Name of Participant: Name of Participant: Name of Participant: Set up recurrence for event? [Y|N]: Choose recurrence cycle:
+1: EVERY WEEK
+2: EVERY 14 DAYS
+3: EVERY MONTH
+Set limit to recurrence: Set Moves Limit: Display entered data? [Y|N]:
+------------------MOVABLE EVENT------------------
+Moves Limit:            2
+Title:                  Birthday Party
+Type:                   MoveAble
+Place:                  Cafe Italia
+Date:                   2022-12-03
+Start Time:             05:10
+Duration:               60 minutes
+Finish Time:            06:10
+Number of Participants: 3
+Participant's name:
+                     1) guest1
+                     2) guest2
+                     3) guest3
+
+
+Save created event? [Y|N]:
+
+Your event successfully added to the Calendar
+Recurrence date(s):
+                      1) 2023-01-02
+                      2) 2023-02-01
+                      3) 2023-03-03
+
+
+Do you want to create another Event? [Y|N]:
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+Place of Event to find:         Details of found Event:
+Title:                  Birthday Party
+Type:                   MoveAble
+Place:                  Cafe Italia
+Date:                   2022-12-03
+Start Time:             05:10
+Duration:               60 minutes
+Finish Time:            06:10
+Number of Participants: 3
+Participant's name:
+                     1) guest1
+                     2) guest2
+                     3) guest3
+
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+Place of Event to find: Event in Cafe Parmezan  not found in Calendar
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+Title of Event to find:         Details of found Event:
+Title:                  Meeting
+Type:                   MoveAble
+Place:                  CVUT
+Date:                   2022-04-10
+Start Time:             12:50
+Duration:               20 minutes
+Finish Time:            13:10
+Number of Participants: 2
+Participant's name:
+                     1) Student1
+                     2) Student2
+
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
+Title of Event to find: Event by Title Barbeque Party  not found in Calendar
+
+
+WELCOME,
+Please, enter below number to perform operation on CALENDAR:
+      #------------------------------------------#
+      #     1   DISPLAY MONTHLY CALENDAR         #
+      #     2   DISPLAY WEEKLY CALENDAR          #
+      #     3   DISPLAY DAILY CALENDAR           #
+      #     4   ADD EVENT                        #
+      #     5   SEARCH EVENT BY PLACE            #
+      #     6   SEARCH EVENT BY TITLE            #
+      #     7   EXPORT EVENT                     #
+      #     8   IMPORT EVENT                     #
+      #     9   CHANGE EVENT TIME                #
+      #     10  PRINT EVENTS BY TYPE             #
+      #     11  DELETE EVENT                     #
+      #     12  Exit                             #
+      #------------------------------------------#
+
+
+Enter number of operation
