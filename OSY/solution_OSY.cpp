@@ -128,7 +128,7 @@ void CSentinelHacker::My_Transmits(ATransmitter transmit)
   unique_lock<std::mutex> lock1(buff2_mutex);
   //unique_lock<std::mutex> lock1(flag2_mutex);
   //cout << "my trasmit starts " << endl;
-  while (flag2 == true || !buffer2.empty())
+  while (flag2 || !buffer2.empty())
   {
            flag3 = false;
     while (buffer2.empty())
@@ -174,13 +174,13 @@ void CSentinelHacker::my_work()
   unique_lock<std::mutex> lock3(buff1_mutex);
   // unique_lock<std::mutex> lock1(flag1_mutex);
   // unique_lock<std::mutex> lock2(control_receivers_mutex);
-  while (!buffer1.empty() || flag1 == true || control_receivers > 0)
+  while (!buffer1.empty() || flag1  || control_receivers > 0)
   {
 
     while (buffer1.empty()) //if buffer1 is empty , flaf is true, wait...
     {
       //cout << " empty" << endl;
-      if (flag1 == true || control_receivers > 0)
+      if (flag1 || control_receivers > 0)
       {
         // cout << "wait" << endl;
         cv_buffer1Cv.wait(lock3);
