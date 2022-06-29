@@ -3,5 +3,5 @@ Application basics
 The program is a simple console-executable, that:
     Loads an image
     Translates the image into ASCII art
-    Applies filters if required – no filters by default
+    Applies filters(Brightness,  if required – no filters by default
     Outputs the image into an output (console, file, …)
