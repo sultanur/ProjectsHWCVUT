@@ -1,7 +1,5 @@
 Calendar
 
-Description of Task:
-
 Application for managing calendar with the ability to create events and search for them.
 
 Implemented functionalities of the following:
