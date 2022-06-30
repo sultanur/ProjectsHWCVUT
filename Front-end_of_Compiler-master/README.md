@@ -12,6 +12,7 @@
 - codegen 
 
 Implemented functions:
+
     Main function, printing numbers (print, println), reading numbers (readln), global variables support, expressions, assignment,
     
     Number constants in hexadecimal and octal base ($ and & prefix)
