@@ -1,8 +1,5 @@
 #This project I did during summer semester 2021 for subject PJP. I implemented front-end part of compiler:Lexer, Parser, AST and codegen for programming language Mila ( Mila was created based on language Pascal)
 
-
-# Semestral work structure
-
 - CMakeLists.txt - CMake source file
 - main.hpp - main function definition
 - Lexer.hpp, Lexan.cpp - Lexan related sources
