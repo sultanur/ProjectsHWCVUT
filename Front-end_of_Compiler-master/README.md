@@ -13,12 +13,20 @@
 
 Implemented functions:
     Main function, printing numbers (print, println), reading numbers (readln), global variables support, expressions, assignment,
+    
     Number constants in hexadecimal and octal base ($ and & prefix)
+    
     If, While (along with break statement)
+    
     For (to and downto; along with break statement)
+    
     Nested blocks
+    
     Statically allocated arrays (indexed in any interval)
+    
     Procedures, Functions, Local variables, exit
+    
     Parameters of functions and procedures
+    
     Real numbers (incuding printing and reading, explicit typecast using functions int and float)
    
