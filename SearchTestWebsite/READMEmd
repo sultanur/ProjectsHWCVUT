@@ -1,0 +1,17 @@
+The task is following – to perform a simple search on the following page: https://jobs.eaton.com using selenium.
+You can run the test for any browser (Chrom, Firefox, …).
+The steps, which the script should perform, are:
+
+Open the jobs.eaton.com page
+Fill in “C++” into the keyword field
+Fill “Prague” into the location field
+Click search button
+Confirm, that number of items found is 4
+
+
+For implementation of task drivers of web browsers (Firefox, Chrome)  are downloaded and can be found inside of the project in folder 'drivers';
+For the time of solving this task, result of search by keywords 'C++' and 'Prague' shows 5 job offers.
+This result is confirmed by 3 value: 1) value  of variable result-indicator , which shows overall result (number) of search;
+2) the length of job-results-container (by tagName 'mat-expansion-panel'); 3) max value of page range for given parameters.
+Comparing these results with each other, and presented value.
+
