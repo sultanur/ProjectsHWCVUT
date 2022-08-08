@@ -1,40 +1,20 @@
 Calendar
 
-Description of Task:
+Application for managing calendar with the ability to create events and search for them.
 
-Create application for managing your calendar with the ability to create events and search fro them.
-
-Implement the functionality of the following:
+Implemented functionalities of the following:
 
  1)   daily, weekly and monthly overview of calendar
- 2)   create and manage events (time, place, date, participants, ...)
- 3)   ability to set event recurrence (once a week, 14 days ...)
+ 2)   creating and managing events (time, place, date, participants,...)
+ 3)   ability to settting event recurrence (once a week, 14 days, once in month)
  4)   search for events by name and / or place
- 5)   search free time for events and move event
+ 5)   searching free time for events and moving events
  6)   exporting and importing events
 
-Using Polymorphism (recommended):
+Using Polymorphism:
 
-    kinds of events: important, optional, moveable, ...
-    event time change strategy: first free, first available with at most X moves
-    types of calendars (daily, weekly, monthly)
+    kinds of events: important, optional, moveable
+    event time change strategy: unchangable, first available with at most X moves
+    types of calendars overview (daily, weekly, monthly)
     formats of exported events
 
--------------------------------------------------------------------------------------------------------------------------------------------------
-
-Class diagram shows realization of task in details(in next page).
-
-As shown in class diagram, I'll implement 4 abstract classes: CCalendar, CEvent, ExportEventFormats and CEventChanges.
-Classes CData and CTime as datatype for all kinds of events and  calendars.
-
-Abstract class CCalendar contains 2 compulsory methods ( print() and create() )  for all derived classes (dailyCalendar, weeklyCalndar, monthlyCalendar). These classes responsible for printing 3 kinds of overview of calendar.
-
-Abstract class CEvent is responsible for creating and deleting event in and from calendar. There are 3 kinds of events(movable, important, optional). All three events will be implemented in derived classes from class CEvent.
-
-Changes in events in calendar can be done depending on type of event importance: FirstFree and FirstMoveAvaible. This task will be implemented by base class CEventChanges and inherited from it all metods and variables in classes for each type of events.
-
-Task  formats of exportEvents from calendar  will be implemented by base class CExportEventChanges and derived from it classs for each format (CSVFile and textFile).
-
-Class Menu helps to display menu of commands for user, to accept it, and to save changes in claendar into file. It interconnects  with  class Database, which is responsible for saving and reading data from files of events.
-
-I am planning to use libraries responsible for accepting commands from keyboards, and result will be displayed in console.
